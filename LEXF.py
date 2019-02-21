@@ -1,10 +1,11 @@
 #!/usr/bin/python
+"""
+LEXF Rosalind.info Solution - Enumerating k-mers Lexicographically
+Author: Peter Vlasveld
+Date: 12/01/2019
+"""
 
-#LEXF Rosalind.info Solution - Enumerating k-mers Lexicographically
-#Author: Peter Vlasveld
-#Date: 12/01/2019
-
-#get dataset from file
+#Get dataset from file
 f1 = open("rosalind_lexf.txt")
 content = f1.readlines()
 f1.close()
@@ -15,7 +16,9 @@ lex = []
 for i in xrange(0, int(content[1])):
     lex.extend(firstLex)
 
-#recursive function to get all possible combinations within the lex set
+"""
+Recursive function to get all possible combinations within the lex set
+"""
 def wordCombo (arr, data, start, end, index, r):
     if index == r:
         tempStr = ""
